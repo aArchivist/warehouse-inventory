@@ -16,6 +16,7 @@ export const seedData: Category[] = [
             quantity: 15,
             unit: 'pieces',
             notes: 'Various sizes from #0 to #3',
+            photo: 'https://m.media-amazon.com/images/I/71wj1uitQpL.jpg',
             subcategoryId: '1-1',
             categoryId: '1'
           },
@@ -25,6 +26,7 @@ export const seedData: Category[] = [
             quantity: 8,
             unit: 'pieces',
             notes: '3mm to 8mm blade sizes',
+            photo: 'https://m.media-amazon.com/images/I/51NMmw+lGvL.jpg',
             subcategoryId: '1-1',
             categoryId: '1'
           }
@@ -41,6 +43,7 @@ export const seedData: Category[] = [
             quantity: 12,
             unit: 'pieces',
             notes: '8-inch to 24-inch sizes',
+            photo: 'https://m.media-amazon.com/images/I/516dzL4pZlL._UF1000,1000_QL80_.jpg',
             subcategoryId: '1-2',
             categoryId: '1'
           },
@@ -50,6 +53,7 @@ export const seedData: Category[] = [
             quantity: 5,
             unit: 'sets',
             notes: 'Metric and imperial, 1/4" to 1" drive',
+            photo: 'https://m.media-amazon.com/images/I/61Wt49VTo-S.jpg',
             subcategoryId: '1-2',
             categoryId: '1'
           }
@@ -72,6 +76,7 @@ export const seedData: Category[] = [
             quantity: 6,
             unit: 'pieces',
             notes: '18V, includes 2 batteries each',
+            photo: 'https://m.media-amazon.com/images/I/71bmqgnZQdL._UF894,1000_QL80_.jpg',
             subcategoryId: '2-1',
             categoryId: '2'
           },
@@ -81,6 +86,7 @@ export const seedData: Category[] = [
             quantity: 3,
             unit: 'pieces',
             notes: 'Heavy duty for concrete work',
+            photo: 'https://m.media-amazon.com/images/I/51Lj5HaCh7L._UF894,1000_QL80_.jpg',
             subcategoryId: '2-1',
             categoryId: '2'
           }
@@ -97,6 +103,7 @@ export const seedData: Category[] = [
             quantity: 4,
             unit: 'pieces',
             notes: '7-1/4 inch blade, corded',
+            photo: 'https://city-hire.imgix.net/assets/img/news/how-to-use-a-circular-saw.png?auto=format%2Ccompress&ch=Width%2CDPR%2CSave-Data&fit=crop&h=512&ixlib=php-3.2.0&w=512',
             subcategoryId: '2-2',
             categoryId: '2'
           },
@@ -106,6 +113,7 @@ export const seedData: Category[] = [
             quantity: 2,
             unit: 'pieces',
             notes: 'Variable speed, includes blades',
+            photo: 'https://m.media-amazon.com/images/I/71TPm1uP3JL.jpg',
             subcategoryId: '2-2',
             categoryId: '2'
           }
@@ -128,6 +136,7 @@ export const seedData: Category[] = [
             quantity: 25,
             unit: 'pairs',
             notes: 'Clear and tinted options',
+            photo: 'https://www.eiscolabs.com/cdn/shop/products/qzck33yh0u21gyhomxx0_fe74d6dd-3e5a-4f9c-9064-4284ef57401a_1220x700.jpg?v=1614175650',
             subcategoryId: '3-1',
             categoryId: '3'
           },
@@ -137,6 +146,7 @@ export const seedData: Category[] = [
             quantity: 8,
             unit: 'pieces',
             notes: 'Full face protection',
+            photo: 'https://proglow.de/cdn/shop/files/144_Visiere-de-protection_1.jpg?v=1749130761&width=2048',
             subcategoryId: '3-1',
             categoryId: '3'
           }
@@ -153,6 +163,7 @@ export const seedData: Category[] = [
             quantity: 15,
             unit: 'pairs',
             notes: 'Noise reduction rating 25dB',
+            photo: 'https://www.carlroth.com/medias/NH19-1-01-1000Wx1000H?context=bWFzdGVyfGltYWdlc3wxMjM5NjV8aW1hZ2UvanBlZ3xhVzFoWjJWekwyZzNOQzlvTmpRdk9EZ3lOVFl5T0RnMU1qSTFOQzVxY0djfDU2ZGIzNDRkZGRhMjgwY2E4MWE3NTkwMmM3NDE4NmYxZjBmMDUxNjdiM2UxNTFmYWYwM2U3OGM3Yjc4ODczMjI',
             subcategoryId: '3-2',
             categoryId: '3'
           },
@@ -162,6 +173,7 @@ export const seedData: Category[] = [
             quantity: 100,
             unit: 'pairs',
             notes: 'Disposable foam plugs',
+            photo: 'https://cdn.modulor.de/products/lvjc/1_768_768_r_3m_gehorschutzstopsel.jpg',
             subcategoryId: '3-2',
             categoryId: '3'
           }
@@ -184,6 +196,7 @@ export const seedData: Category[] = [
             quantity: 12,
             unit: 'cans',
             notes: '400ml aerosol cans',
+            photo: 'https://media.wd40.de/app/uploads/2021/04/24124351/WD-40-Multifunktionsprodukt-Smart-Straw.png.webp',
             subcategoryId: '4-1',
             categoryId: '4'
           },
@@ -193,6 +206,7 @@ export const seedData: Category[] = [
             quantity: 5,
             unit: 'liters',
             notes: 'SAE 10W-30 grade',
+            photo: 'https://www.hanseline.de/wp-content/uploads/2019/06/naehmaschinenoele.jpg',
             subcategoryId: '4-1',
             categoryId: '4'
           }
@@ -209,6 +223,7 @@ export const seedData: Category[] = [
             quantity: 8,
             unit: 'liters',
             notes: 'Heavy duty industrial cleaner',
+            photo: 'https://www.datocms-assets.com/10845/1719527968-30035-wd-40-specialist-cleaner-degreaser-32oz_front-dr1.png?bg=transparent&fm=png&ixlib=react-8.6.4',
             subcategoryId: '4-2',
             categoryId: '4'
           },
@@ -218,6 +233,7 @@ export const seedData: Category[] = [
             quantity: 3,
             unit: 'liters',
             notes: 'Phosphoric acid based',
+            photo: 'https://m.media-amazon.com/images/I/81MjD9jD9vL._UF1000,1000_QL80_.jpg',
             subcategoryId: '4-2',
             categoryId: '4'
           }
