@@ -1,38 +1,94 @@
+/* Custom styles for the inventory app */
 .App {
-  text-align: center;
+  text-align: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Custom scrollbar for better UX */
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Focus styles for better accessibility */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Custom card hover effects */
+.instrument-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.instrument-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 1025px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Additional responsive styles */
+@media (min-width: 1024px) {
+  .container > div:first-child {
+    flex-direction: row;
+  }
+  
+  .container > div:first-child > div:first-child {
+    width: 20rem;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  header .container > div:first-child {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header .container > div:first-child > * + * {
+    margin-top: 0;
   }
 }

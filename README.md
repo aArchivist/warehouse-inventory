@@ -1,46 +1,177 @@
-# Getting Started with Create React App
+# Warehouse Inventory Management MVP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based inventory management tool for warehouse instruments built with TypeScript and TailwindCSS.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### Core Functionality
+- **Full CRUD Operations**: Create, Read, Update, Delete for categories, subcategories, and instruments
+- **Hierarchical Organization**: Category → Subcategory → Instrument structure
+- **Search & Filter**: Search by name/notes and filter by category/subcategory
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
 
-### `npm start`
+### User Interface
+- **Modern Card Layout**: Clean, modern cards displaying instrument information
+- **Collapsible Sidebar**: Tree view for easy navigation through categories
+- **Search Bar**: Real-time search functionality
+- **Filter Dropdowns**: Category and subcategory filters
+- **Modal Forms**: User-friendly add/edit forms
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Data Management
+- **In-Memory Storage**: All data stored in React state during session
+- **Seed Data**: Pre-populated with example warehouse instruments
+- **Type Safety**: Full TypeScript support
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technology Stack
 
-### `npm test`
+- **React 18** with TypeScript
+- **TailwindCSS** for styling
+- **Modern ES6+** features
+- **Responsive Design** principles
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm or yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone or download the project
+2. Navigate to the project directory:
+   ```bash
+   cd inventory-mvp
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Adding Instruments
+1. Click the "Add Instrument" button in the header
+2. Fill in the required fields (name, quantity, unit, category, subcategory)
+3. Optionally add a photo URL and notes
+4. Click "Add Instrument" to save
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Editing Instruments
+1. Click the edit icon (pencil) on any instrument card
+2. Modify the information as needed
+3. Click "Update Instrument" to save changes
 
-## Learn More
+### Deleting Instruments
+1. Click the delete icon (trash) on any instrument card
+2. Confirm the deletion in the popup dialog
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Searching and Filtering
+- Use the search bar to find instruments by name or notes
+- Use the category dropdown to filter by specific categories
+- Use the subcategory dropdown to filter by specific subcategories
+- The sidebar tree view can also be used for navigation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Navigation
+- Use the collapsible sidebar to browse categories and subcategories
+- Click on categories to expand/collapse them
+- Click on subcategories to filter instruments
+- The main content area shows filtered results
+
+## Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── CategoryTree.tsx     # Hierarchical category navigation
+│   ├── Header.tsx          # Header with search and filters
+│   ├── InstrumentCard.tsx  # Individual instrument display
+│   └── InstrumentForm.tsx  # Add/edit form modal
+├── data/
+│   └── seedData.ts         # Example data for demonstration
+├── types/
+│   └── index.ts            # TypeScript type definitions
+├── App.tsx                 # Main application component
+├── App.css                 # Custom styles
+└── index.css               # TailwindCSS imports
+```
+
+## Data Structure
+
+### Categories
+- Top-level organization for instruments
+- Contains multiple subcategories
+
+### Subcategories
+- Second-level organization within categories
+- Contains multiple instruments
+
+### Instruments
+- Individual items with properties:
+  - Name
+  - Quantity (number)
+  - Unit (pieces, liters, etc.)
+  - Notes (optional)
+  - Photo URL (optional)
+  - Category and subcategory references
+
+## Customization
+
+### Adding New Categories
+Edit the `seedData.ts` file to add new categories, subcategories, and instruments.
+
+### Styling
+The application uses TailwindCSS. Modify the classes in components or add custom CSS in `App.css`.
+
+### Features
+The modular component structure makes it easy to add new features:
+- Add new filter types
+- Implement sorting functionality
+- Add export capabilities
+- Integrate with a backend API
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Development
+
+### Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (one-way operation)
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `build` folder.
+
+## License
+
+This project is created for demonstration purposes as an MVP inventory management system.
+
+## Future Enhancements
+
+Potential improvements for a production version:
+- Backend API integration
+- Database persistence
+- User authentication
+- Export functionality (PDF, Excel)
+- Barcode scanning
+- Stock alerts
+- Audit trails
+- Multi-location support
