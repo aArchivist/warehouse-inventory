@@ -14,26 +14,29 @@ const InstrumentCard: React.FC<InstrumentCardProps> = ({
 }) => {
   return (
     <div className="card" style={{ transition: 'box-shadow 0.2s ease-in-out' }}>
-      <div style={{ aspectRatio: '16/9', backgroundColor: '#f3f4f6' }}>
+      <div style={{ 
+        aspectRatio: '16/9', 
+        backgroundColor: '#f9fafb',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '0.5rem'
+      }}>
         {instrument.photo ? (
           <img
             src={instrument.photo}
             alt={instrument.name}
-            style={{ width: '100%', height: '12rem', objectFit: 'cover' }}
+            style={{ 
+              maxWidth: '100%', 
+              maxHeight: '100%', 
+              objectFit: 'contain',
+              borderRadius: '0.375rem'
+            }}
           />
         ) : (
-          <div style={{ 
-            width: '100%', 
-            height: '12rem', 
-            display: 'flex', 
-            alignItems: 'center', 
-            justifyContent: 'center', 
-            backgroundColor: '#f3f4f6' 
-          }}>
-            <svg style={{ width: '4rem', height: '4rem', color: '#9ca3af' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </div>
+          <svg style={{ width: '4rem', height: '4rem', color: '#9ca3af' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
         )}
       </div>
       
